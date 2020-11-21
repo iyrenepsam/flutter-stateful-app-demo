@@ -75,11 +75,28 @@ class _CalculatorAppState extends State<CalculatorApp> {
                       setState(() {
                         result=getn1-getn2;
                       });
+                      print(result);
 
                     },
                     child: Text("DIFFERENCE"),
                     ),
 
+
+                    RaisedButton(
+                      color: Colors.blueGrey,
+                      onPressed: (){
+
+                        double getn1=double.parse(getnumber1.text);
+                        double getn2=double.parse(getnumber2.text);
+
+                        setState(() {
+                          result=getn1*getn2;
+                        });
+                        print(result);
+
+                    },
+                    child: Text("PRODUCT"),
+                    ),
                     Text(result.toString()),
 
             ],
